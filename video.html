@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>videodemo</title>
+    <link rel="stylesheet" type="text/css" href="video.css">
+    
+  </head>
+  <body>
+   <div class="videoplay" id="videoPlay">
+    <video id="html5VideoPlayer" width="100%" height="100%" src="testvideo.mp4" autoplay="autoplay" loop="loop" >
+    </video>
+    <!-- 播放器工具栏 -->
+    <div class= "html5-player-toolbar">
+        <!-- 视频滑块容器 -->
+        <div id = "filmWrap">
+            <!-- 视频滑块轨道 -->
+            <div id="filmLoad">
+                <!-- 视频滑块句柄 -->
+                <div id="filmCircle"></div>
+            </div>
+        </div>
+
+        <!-- 工具栏其他UI -->
+        <div class = "html5-player-toolbar-back">
+            <!-- 停止 -->
+            <div id="html5PlayerToolbarStop" class="stop" onclick="pause()"></div>
+            <!-- 继续 -->
+            <div id="html5PlayerToolbarContinue" class="continue" onclick="play()"></div>
+            <!-- 时间 -->
+            <div class="video-time-show">
+                <span id = "currentTime">00:00</span>/<span id="duration">00:00</span>
+            </div>
+            <!-- 声音标识 -->
+            <div class="voice-icon" id="voiceIcon" onclick="nosound()"></div>
+            <div class="voice-icon-no" id="voiceIconNo" onclick="nosound()"></div>
+
+            <!-- 声音滑块容器 -->
+            <div id = "voiceWrap">
+                <!-- 声音滑块轨道 -->
+                <div id="voiceLoad">
+                    <!-- 声音滑块句柄 -->
+                    <div id="videoCircle"></div>
+                </div>
+            </div>
+
+            <!-- 全屏标识 -->
+            <div class="html5-video-allscreem" onclick="allscreem()"></div>
+
+            <!-- 分享按钮 -->
+            <div class="html5-video-share" onclick="share()"></div>        
+        </div>
+    </div>
+</div>
+   
+  </body>
+  <script type="text/javascript" src="video.js"></script>
+</html>
